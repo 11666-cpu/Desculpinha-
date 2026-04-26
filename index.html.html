@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Me perdoa? neném 💔</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      font-family: Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      color: #fff;
+    }
+
+    .container {
+      background: rgba(0,0,0,0.3);
+      padding: 30px;
+      border-radius: 20px;
+      max-width: 350px;
+      animation: fadeIn 2s ease;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      margin: 5px;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .yes {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    .no {
+      background-color: #f44336;
+      color: white;
+      position: relative;
+    }
+
+    .yes:hover {
+      transform: scale(1.1);
+    }
+
+    .no:hover {
+      position: absolute;
+      top: calc(100% * Math.random());
+      left: calc(100% * Math.random());
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Me perdoa? 🥺</h1>
+  <p>
+    Eu sei que errei…<br><br>
+    Mas eu só quero vc minha delicinha 💗<br>
+    Eu te amo<br><br>
+    eu quero você, só você.
+  </p>
+
+  <button class="yes" onclick="respostaSim()">Sim 💕</button>
+  <button class="no" onmouseover="fugir()">Não 😢</button>
+
+  <p id="resposta"></p>
+</div>
+
+<script>
+  function respostaSim() {
+    document.getElementById("resposta").innerHTML = "Eu te amo 😭❤️ Obrigado por me dar outra chance!";
+  }
+
+  function fugir() {
+    const botao = document.querySelector(".no");
+    botao.style.position = "absolute";
+    botao.style.top = Math.random() * window.innerHeight + "px";
+    botao.style.left = Math.random() * window.innerWidth + "px";
+  }
+</script>
+
+</body>
+</html>
